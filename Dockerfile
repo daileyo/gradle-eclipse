@@ -6,6 +6,7 @@ VOLUME [ "/scripts" ]
 ADD scripts /scripts
 
 #install java
+RUN /scripts/install-java.sh
 #install eclipse
 #install gradle
 #install rcp
