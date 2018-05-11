@@ -9,6 +9,7 @@ ADD scripts /scripts
 RUN /scripts/install-java.sh
 #install eclipse
 #install gradle
+RUN /scripts/install-gradle.sh
 #install rcp
 
 #set /etc/bashrc
