@@ -8,6 +8,7 @@ ADD scripts /scripts
 #install java
 RUN /scripts/install-java.sh
 #install eclipse
+RUN /scripts/install-eclipse.sh
 #install gradle
 RUN /scripts/install-gradle.sh
 #install rcp
