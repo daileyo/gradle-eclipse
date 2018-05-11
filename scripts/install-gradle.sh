@@ -6,7 +6,7 @@ GRADLE_ZIP=gradle-2.13-all.zip
 mkdir -p /opt/gradle/$GRADLE_VERSION
 GRADLE_HOME=/opt/gradle/$GRADLE_VERSION
 
-wget -N https://services.gradle.org/distributions/$GRADLE_ZIP
+curl -L https://services.gradle.org/distributions/$GRADLE_ZIP --output $GRADLE_ZIP -#
 unzip -q $GRADLE_ZIP -d .
 mv gradle-${GRADLE_VERSION}/* /opt/gradle/$GRADLE_VERSION
 

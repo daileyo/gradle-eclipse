@@ -1,6 +1,6 @@
 FROM centos:latest
 
-RUN yum install -y wget && yum install -y unzip
+RUN  rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7 && yum install -y -q -e 0 unzip && yum install -y -q -e 0 git
 
 VOLUME [ "/scripts" ]
 ADD scripts /scripts

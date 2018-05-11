@@ -4,7 +4,7 @@ ECLIPSE_TAR=eclipse-jee-oxygen-3a-linux-gtk-x86_64.tar.gz
 
 mkdir -p /opt/eclipse/oxygen
 
-wget --no-cookies http://mirror.csclub.uwaterloo.ca/eclipse/technology/epp/downloads/release/oxygen/3a/$ECLIPSE_TAR
+curl -L http://mirror.csclub.uwaterloo.ca/eclipse/technology/epp/downloads/release/oxygen/3a/$ECLIPSE_TAR --output $ECLIPSE_TAR -#
 tar -xzf $ECLIPSE_TAR && mv eclipse/* /opt/eclipse/oxygen
 
 alternatives --install /usr/bin/eclipse eclipse /opt/eclipse/oxygen/eclipse 2
