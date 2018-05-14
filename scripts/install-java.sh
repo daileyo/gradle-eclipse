@@ -25,7 +25,7 @@ printf "jdk downloads done.\n"
 #extract all files (parallel)
 for jdk in "${!JDK_LIST[@]}"; do
     JDK_TAR="${jdk}.tar.gz"
-    printf "Extracting ${JDK_TAR}.\n" && tar xzf $JDK_TAR -C /opt/java/${jdk} --strip-components 1
+    printf "   Extracting ${JDK_TAR}.\n" && tar xzf $JDK_TAR -C /opt/java/${jdk} --strip-components 1
 done
 wait
 printf "jdk extractions complete.\n"
@@ -34,7 +34,6 @@ printf "jdk extractions complete.\n"
 for jdk in "${!JDK_LIST[@]}"; do
     JDK_TAR="${jdk}.tar.gz"
 
-    printf "****${DL_FN}\n****${JDK_FLDR}\n"
     alternatives --install /usr/bin/java java /opt/java/$JAVA_VERSION/bin/java $i
     alternatives --install /usr/bin/jar jar /opt/java/$JAVA_VERSION/bin/jar $i
     alternatives --install /usr/bin/javac javac /opt/java/$JAVA_VERSION/bin/javac $i
