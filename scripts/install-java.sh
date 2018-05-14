@@ -18,17 +18,17 @@ for jdk in "${!JDK_LIST[@]}"; do
     JDK_TAR=$jdk.tar.gz
     
 
-    printf "Downloading ${jdk}.\n" && curl -L --header "${SECURITY_COOKIE}" "${JDK_LIST[$jdk]}" --output "${JDK_TAR}" -s &
+    printf "   Downloading ${jdk}.\n" && curl -L --header "${SECURITY_COOKIE}" "${JDK_LIST[$jdk]}" --output "${JDK_TAR}" -s &
 done
 wait
-printf "jdk downloads done.\n"
+printf "   jdk downloads done.\n"
 #extract all files (parallel)
 for jdk in "${!JDK_LIST[@]}"; do
     JDK_TAR="${jdk}.tar.gz"
     printf "   Extracting ${JDK_TAR}.\n" && tar xzf $JDK_TAR -C /opt/java/${jdk} --strip-components 1
 done
 wait
-printf "jdk extractions complete.\n"
+printf "   jdk extractions complete.\n"
 #configure default and cleanup
 
 for jdk in "${!JDK_LIST[@]}"; do
