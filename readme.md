@@ -1,3 +1,5 @@
-#gradle-eclipse
+#dagradle
 
-A gradle environment with Eclipse and other helpful resources available for webservice development.
+An ancient gradle setup for projects that have a dependency on ancient versions of gradle, as well as oracle jdks.
+
+
