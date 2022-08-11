@@ -4,5 +4,3 @@ A gradle environment with Eclipse and other helpful resources available for webs
 
 
 Out of date project that will end up getting deleted!  
-
-More information needed.
